@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly, nonatomic) NSString *gtAppSecret;
 
 @property (readonly, nonatomic) NSString *apiHostUrl;
+@property (readonly, nonatomic) NSString *privateKey;
+@property (readonly, nonatomic) NSString *privateIv;
 
 @end
 

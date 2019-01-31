@@ -89,7 +89,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "MDLib", "MDLib/*"
+  spec.source_files  = "MDLib/**/*.{h,m}"
   spec.public_header_files = "MDLib/MDLib.h"
 
 

@@ -9,10 +9,11 @@
 #import "DES3Util.h"
 #import "GTMBase64.h"
 #import <CommonCrypto/CommonCryptor.h>
+#import "MDUtility.h"
 
 @implementation DES3Util
 
-#define gkey @"beijingkangweijinqiaokej"
+#define gkey [MD]
 #define gIv @"01234567"
 
 // 加密方法
@@ -30,8 +31,8 @@
     bufferPtr = malloc(bufferPtrSize * sizeof(uint8_t));
     memset((void *)bufferPtr, 0x0, bufferPtrSize);
 
-    const void *vkey = (const void *)[gkey UTF8String];
-    const void *vinitVec = (const void *)[gIv UTF8String];
+    const void *vkey = (const void *)[[MDUtility sharedInstance].appBaseConfig.privateKey UTF8String];
+    const void *vinitVec = (const void *)[[MDUtility sharedInstance].appBaseConfig.privateIv UTF8String];
 
     ccStatus = CCCrypt(kCCEncrypt,
                        kCCAlgorithm3DES,
@@ -70,8 +71,8 @@
     bufferPtr = malloc(bufferPtrSize * sizeof(uint8_t));
     memset((void *)bufferPtr, 0x0, bufferPtrSize);
 
-    const void *vkey = (const void *)[gkey UTF8String];
-    const void *vinitVec = (const void *)[gIv UTF8String];
+    const void *vkey = (const void *)[[MDUtility sharedInstance].appBaseConfig.privateKey UTF8String];
+    const void *vinitVec = (const void *)[[MDUtility sharedInstance].appBaseConfig.privateIv UTF8String];
 
     ccStatus = CCCrypt(kCCDecrypt,
                        kCCAlgorithm3DES,
