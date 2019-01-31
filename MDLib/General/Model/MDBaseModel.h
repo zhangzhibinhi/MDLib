@@ -12,8 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MDBaseModel : NSObject
 
-- (void)getRe
-
 @end
 
 NS_ASSUME_NONNULL_END
