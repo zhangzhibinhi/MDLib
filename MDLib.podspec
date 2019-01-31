@@ -130,6 +130,18 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  spec.dependency 'Bugly', 'MLeaksFinder', 'Aspects', 'Masonry', 'AFNetworking', 'SDWebImage', 'MJRefresh', 'MJExtension', 'FMDB', 'SAMKeychain', 'SVProgressHUD', 'Toast', 'IQKeyboardManager', 'GTSDK'
-
+  spec.dependency 'Bugly'
+  spec.dependency 'MLeaksFinder'
+  spec.dependency 'Aspects'
+  spec.dependency 'Masonry'
+  spec.dependency 'AFNetworking'
+  spec.dependency 'SDWebImage'
+  spec.dependency 'MJRefresh'
+  spec.dependency 'MJExtension'
+  spec.dependency 'FMDB'
+  spec.dependency 'SAMKeychain'
+  spec.dependency 'SVProgressHUD'
+  spec.dependency 'Toast'
+  spec.dependency 'IQKeyboardManager'
+  spec.dependency 'GTSDK'
 end
